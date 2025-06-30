@@ -34,7 +34,10 @@ android {
 }
 
 dependencies {
-    implementation(files("libs/mtusdk.aar"))
+    implementation(files("mtusdk"))
+   // implementation(name = "mtusdk", ext = "aar")
+  //  implementation("mtusdk")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

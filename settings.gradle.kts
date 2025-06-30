@@ -11,10 +11,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        // Required for JitPack-style dependencies
+
         maven(url = "https://jitpack.io")
         flatDir {
-            dirs("mtusdk/libs") // or your correct path to mtusdk.aar
+            dirs("libs")
         }
     }
 }
