@@ -46,16 +46,16 @@ dependencies {
 group = "com.github.meghagettrx"
 version = "1.0.0"
 
-publishing {
-    publications {
-        create<MavenPublication>("release") {
-            groupId = "com.github.meghagettrx"
-            artifactId = "mtusdk"
-            version = "1.0.0"
-
-            artifact(file("libs/mtusdk.aar")) {
-                extension = "aar"
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.meghagettrx"
+                artifactId = "mtusdk"
+                version = "1.0.0"
             }
         }
     }
 }
+
