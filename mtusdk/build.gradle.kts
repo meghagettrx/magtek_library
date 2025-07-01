@@ -34,7 +34,7 @@ android {
 }
 
 dependencies {
-    implementation(files("libs/classes.jar"))
+    api(files("libs/classes.jar"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -45,7 +45,7 @@ dependencies {
 }
 
 group = "com.github.meghagettrx"
-version = "1.0.4"
+version = "1.0.6"
 
 afterEvaluate {
     publishing {
@@ -54,7 +54,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.meghagettrx"
                 artifactId = "mtusdk"
-                version = "1.0.4"
+                version = "1.0.6"
             }
         }
     }
